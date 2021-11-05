@@ -106,6 +106,7 @@ File > Preferences > Settings
 
 Keep the default values, except for the following points:
 | Extension | Configuration | Value |
+| :----: | --- | --- |
 | Text editor | Render Whitespace | X |
 | Diff tool | Ignore Trim Whitespace | |
 | Breadcrumbs | Enabled | X |
