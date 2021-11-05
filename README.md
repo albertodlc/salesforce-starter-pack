@@ -247,7 +247,7 @@ Prettier is an opinionated code formatter. It enforces a consistent style by par
 
 ### Uncrustify
 
-> Download Link:- https://marketplace.visualstudio.com/items?itemName=LaurentTreguier.uncrustify
+> Download Link:- https://marketplace.visualstudio.com/items?itemName=zachflower.uncrustify
 
 Formats your code using uncrustify. Supported languages are :
 
