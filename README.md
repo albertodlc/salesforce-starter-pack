@@ -7,16 +7,28 @@
 
 ## Table of Contents  
 - [Basic applications](#basic-applications)  
-    - [Node.js](#node-js)
-    - [Java SE Development Kit](#java-se-development-kit)
+    - [Node.js](#node.js)
+    - [Java SE Development Kit](#java-se-development-kit-jdk-11.0-version-(or-java-8.0))
     - [Visual Studio Code](#visual-studio-code)
         - [VSC configuration](#visual-studio-code-configuration)
     - [GIT](#git)
         - [GIT configuration](#git-configuration)
     - [Salesforce CLI](#salesforce-cli)
     - [Uncrustify](#uncrustify)
+
 - [VSC Salesforce Extensions](#vsc-salesforce-extensions)
-    - [Salesforce Extension Pack](#node-js)
+    - [Salesforce Extension Pack Configuration](#salesforce-extensions-configuration)
+- [GIT Graph](#git-graph)
+- [GIT Lens](#git-lens)
+- [ESLint](#eslint)
+- [Prettier](#prettier)
+- [Uncrustify](#uncrustify)
+- [#region folding for VS Code](#region-folding-for-vs-code)
+- [XML Language Support](#xml-language-support)
+- [Salesforce Documenter](#salesforce-documenter)
+
+- [Chrome Salesforce Extensions](#chrome-salesforce-extensions)
+    - [Salesforce Inspector](#salesforce-inspector)
 
 ## Basic applications
 
@@ -124,7 +136,12 @@ The Salesforce CLI is a powerful command line interface that simplifies developm
 - Create and execute tests
 - Create and install packages
 
-After you install Salesforce CLI, run "sfdx commands" in a terminal or command shell to view the list of available commands.
+After you install Salesforce CLI, run the following command in a terminal or command shell to view the list of available commands.
+
+```cmd
+sfdx commands
+```
+
 
 ### Uncrustify
 A source code beautifier for C, C++, C#, ObjectiveC, D, Java, Pawn and VALA
@@ -151,7 +168,7 @@ choco install uncrustify
 After finishing the installation copy this [file](./resources/uncrustify.cfg) to the following directory.
 
 ```bash
-C:\\Users\USER_NAME
+C:\\Users\\USER_NAME
 ```
 
 ## VSC Salesforce Extensions
@@ -165,4 +182,139 @@ This extension pack includes tools for developing on the Salesforce platform in 
     <img height="auto" width="auto" src="img/sfdx.gif" />
 </p>
 
-### 
+#### Salesforce Extensions Configuration
+To access Visual Studio Code configuration file you can edit the .json file directly or use the UI (this is the easiest one). Go to:
+
+```bash
+File > Preferences > Settings
+```
+
+Keep the default values, except for the following points:
+| Extension | Configuration | Value |
+| :----: | :---: | :---: |
+| Salesforce Apex Configuration | Enable-semantic-errors | X |
+| Salesforce Apex Configuration | Enable-sobject-refresh-onstartup | X |
+| Salesforce Apex Configuration | Java:Home | JAVA_HOME |
+| Salesforce Feature Previews | Detect Conflicts At Sync | X |
+| Salesforce Feature Previews | Push-or-deploy-on-save |  |
+| Salesforce Feature Previews | Retrieve-test-code-coverage | X |
+| Salesforce Lightning | Show Lightning Explorer | X |
+| Salesforce Visualforce | Visualforce>Format:Indent Inner HTML | X |
+
+### GIT Graph
+
+> Download Link:- https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph
+
+View a Git Graph of your repository, and easily perform Git actions from the graph. Configurable to look the way you want!
+
+<p align="center">
+    <img height="auto" width="auto" src="img/gitgraph.gif" />
+</p>
+
+#### GIT Graph Configuration
+To access Visual Studio Code configuration file you can edit the .json file directly or use the UI (this is the easiest one). Go to:
+
+```bash
+File > Preferences > Settings
+```
+
+Keep the default values, except for the following points:
+| Extension | Configuration | Value |
+| :----: | :---: | :---: |
+| Git Graph | Fetch Avatars | X |
+
+### GIT Lens
+
+> Download Link:- https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+
+GitLens simply helps you better understand code. Quickly glimpse into whom, why, and when a line or code block was changed. Jump back through history to gain further insights as to how and why the code evolved. Effortlessly explore the history and evolution of a codebase.
+
+<p align="center">
+    <img height="auto" width="auto" src="img/gitlens.gif" />
+</p>
+
+### ESLint
+
+> Download Link:- https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
+ESLint statically analyzes your code to quickly find problems. ESLint is built into most text editors and you can run ESLint as part of your continuous integration pipeline. Many problems ESLint finds can be automatically fixed. ESLint fixes are syntax-aware so you won't experience errors introduced by traditional find-and-replace algorithms.
+
+### Prettier
+
+> Download Link:- https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
+Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
+
+### Uncrustify
+
+> Download Link:- https://marketplace.visualstudio.com/items?itemName=LaurentTreguier.uncrustify
+
+Formats your code using uncrustify. Supported languages are :
+
+- C
+- C++
+- C#
+- D
+- Java
+- Objective-C
+- Pawn
+- Vala
+
+Apex, while not officially supported by uncrustify, is also partially supported by the extension and will be formatted as if it was Java.
+
+#### Uncrustify Configuration
+To access Visual Studio Code configuration file you can edit the .json file directly or use the UI (this is the easiest one). Go to:
+
+```bash
+File > Preferences > Settings
+```
+
+Keep the default values, except for the following points:
+| Extension | Configuration | Value |
+| :----: | :---: | :---: |
+| Uncrustify Configuration | Config Path: Windows | [ Edit .json file, add next line ] C:\\Users\\USER_NAME\\uncrustify.cfg |
+| Uncrustify Configuration | Use Replace Option | X |
+
+### #region folding for VS Code
+
+> Download Link:- https://marketplace.visualstudio.com/items?itemName=maptz.regionfolder
+
+This extension enhances the default code folding abilities of Visual Studio Code editor. Regions of code that you'd like to be folded can be wrapped with #region comments.
+
+<p align="center">
+    <img height="auto" width="auto" src="img/regionfolding.gif" />
+</p>
+
+### XML Language Support
+
+> Download Link:- https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml
+
+This VS Code extension provides support for creating and editing XML documents, based on the LemMinX XML Language Server.
+
+<p align="center">
+    <img height="auto" width="auto" src="img/xml.gif" />
+</p>
+
+### Salesforce Documenter
+
+> Download Link:- https://marketplace.visualstudio.com/items?itemName=HugoOM.sfdx-autoheader
+
+Salesforce Documenter aims at facilitating properly structured code documentation for Salesforce-related files by automating related tasks such as generating & maintaining File and Method headers. SFDoc can be adopted as a project-wide and/or team-wide standard, in an effort to encourage, and eventually enforce, proper code documenting. Through these means, code becomes easier to understand, maintain, and evolve.
+
+<p align="center">
+    <img height="auto" width="auto" src="img/documenter.gif" />
+</p>
+
+## Chrome Salesforce Extensions
+
+### Salesforce Inspector
+
+> Download Link:- https://chrome.google.com/webstore/detail/salesforce-inspector/aodjmnfhjibkcdimpodiifdjnnncaafh?hl=es
+
+Productivity tools for Salesforce administrators and developers to inspect data and metadata directly from the Salesforce UI.
+Extension to add a metadata layout on top of the standard Salesforce UI to improve the productivity and joy of Salesforce configuration, development, and integration work.
+
+<p align="center">
+    <img height="auto" width="auto" src="img/inspector.jpg" />
+</p>
+
