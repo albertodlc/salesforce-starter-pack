@@ -13,11 +13,14 @@
     - [GIT](#git)
     - [Salesforce CLI](#salesforce-cli)
     - [Uncrustify](#uncrustify)
+- [VSC configuration](#visual-studio-code-configuration)  
 
 ## Basic configuration
 
 ### Node.js
 Node.js is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine) for easily building fast and scalable network applications. Most of tools are executed using this runtime (in our case Visual Studio Code and Salesforce CLI);
+
+Node uses a package manager call NPM (Node Package Manager).
 
 - Link => https://nodejs.org/es/
 
@@ -50,8 +53,66 @@ So regardless of whether you write code that only you will see, or work as part 
 
 Git is software that runs locally. Your files and their history are stored on your computer. You can also use online hosts (such as GitHub :octocat: or Bitbucket) to store a copy of the files and their revision history. Having a centrally located place where you can upload your changes and download changes from others, enable you to collaborate more easily with other developers. Git can automatically merge the changes, so two people can even work on different parts of the same file and later merge those changes without losing each other’s work!
 
-### Salesoforce CLI
+- Link => https://git-scm.com/
+### Salesforce CLI
+The Salesforce CLI is a powerful command line interface that simplifies development and build automation when working with your Salesforce org. Use it to:
 
+- Aggregate all the tools you need to develop with and perform commands against your Salesforce org
+- Synchronize source to and from scratch orgs
+- Create and manage orgs
+- Import and export data
+- Create and execute tests
+- Create and install packages
+
+After you install Salesforce CLI, run "sfdx commands" in a terminal or command shell to view the list of available commands.
+
+- Link => https://developer.salesforce.com/tools/sfdxcli 
 
 ### Uncrustify
+A source code beautifier for C, C++, C#, ObjectiveC, D, Java, Pawn and VALA
 
+Features:
+- Highly configurable - 753 configurable options as of version 0.73.0
+- add/remove spaces
+- add/remove newlines
+- add/remove blanklines
+- indent code
+- align code
+- modify code
+
+To install Uncrustify you need to use Chocolatey, a Package Manager for Windows.
+
+- Link => https://chocolatey.org/install#install-step1
+
+And then execute this command line:
+
+```Powershell
+choco install uncrustify
+```
+
+After finishing the installation copy this [file](./resources/uncrustify.cfg) to the following directory.
+
+```bash
+C:\\Users\USER_NAME
+```
+
+## Visual Studio Code Configuration
+
+To access Visual Studio Code configuration file you can edit the .json file directly or use the UI (this is the easiest one). Go to:
+
+```bash
+File > Preferences > Settings
+```
+
+Keep the default values, except for the following points:
+| Extension | Configuration | Value |
+| Text editor | Render Whitespace | X |
+| Diff tool | Ignore Trim Whitespace | |
+| Breadcrumbs | Enabled | X |
+| Git | autofetch | |
+| Git | Enable Smart Commit | X |
+| Git | Fetch On Pull | |
+| Git | Rebase When Sync | |
+| Git | Show Push Success Notification | X |
+| npm | Npm: Enable Scrip[t Explorer| X |
+| npm | Npm: Script Explorer Action | run |
